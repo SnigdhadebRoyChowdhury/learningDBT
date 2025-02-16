@@ -1,4 +1,4 @@
-<h1> Learning DBT (Data Build Tool) </h1>
+<h1> Learning dbt (Data Build Tool) </h1>
 
 ![alt text](images/dbt.png)
 
