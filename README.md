@@ -22,7 +22,8 @@ But if you want to use Snowflake or data platform, please use [this link](https:
 - WSL if you using Windows
 
 ```
-You can use PyCharm as your IDE but since I have the development completely on WSL and VS Code allows development on WSL while being installled on Windows, it will be easier if you do the same.
+You can use PyCharm as your IDE but since I have worked completely on WSL and since VS Code allows development on WSL while being installled on Windows, it will be easier if you do the same.
+
 But if you want to use PyCharm on Windows, then please check the environment variables. 
 
 If you are using a Macbook, then you can follow the same steps both with VS Code and PyCharm.
