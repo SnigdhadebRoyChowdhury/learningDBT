@@ -26,7 +26,7 @@ But if you want to use Snowflake or data platform, please use [this link](https:
 - Create the container using the command:
     `docker run --name my_postgres_container -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 -v postgres_data:/var/lib/postgresql/data postgres`
 
-Once you have created the container, you can start or stop the container using `docker start <container_name>` or `docker stop <conatiner_name>`.
+Once you have created the container, you can start or stop the container using `docker start <container_name>` or `docker stop <container_name>`.
 
 Once the container is up and running, you can connect to the database using the below details:
 - Hostname: `localhost`
