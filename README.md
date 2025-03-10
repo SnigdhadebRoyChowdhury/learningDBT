@@ -44,6 +44,12 @@ Once the container is up and running, you can connect to the database using the 
 - Username: `postgres`
 - Password: `the password the you set during the container creation`
 
+```
+If you don't want to use Postgres on Docker that is possible too. 
+
+Just install Postgres on your system and use it.
+```
+
 
 **Setting up the dbt environment:**
 - Open up your IDE of choice and create a virtual environment in Python 
