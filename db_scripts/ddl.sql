@@ -15,3 +15,18 @@ CREATE TABLE IF NOT EXISTS airbnb.raw_listings
                      price float,
                      created_at timestamp without time zone,
                      updated_at timestamp without time zone);
+
+CREATE TABLE IF NOT EXISTS raw_hosts
+                    (id bigint,
+                    name text,
+                    is_superhost text,
+                    created_at timestamp without time zone,
+                    updated_at timestamp without time zone);
+
+
+CREATE TABLE IF NOT EXISTS raw_reviews
+                    (listing_id bigint,
+                        date date,
+                        reviewer_name text,
+                        comments_string text,
+                        sentiment text);
