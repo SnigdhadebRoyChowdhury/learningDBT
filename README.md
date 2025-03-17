@@ -61,3 +61,14 @@ Just install Postgres on your system and use it.
 - Once you have entered the details, you can see the details using the command, `cat .dbt/profiles.yml`
 - If you want to update the details later, you can do so by editing the file `~/.dbt/profiles.yml`; you can use the `vi`, `vim` or `nano` to edit the file
 
+#### Loading the data
+The next step is to create the raw table and then insert data into them.
+
+The first step is to get the raw data in csv format. In this case I am using the Airbnb datasets that are available online.
+
+Go to [this](https://insideairbnb.com/get-the-data/) link and download the `listings.csv` and the `reviews.csv` files for any city. You can download is for more than one cityis you want.
+
+Once you download the data, create a `data` directory as shown below in store the move your csv files there.
+
+![alt text](images/data_folder.png)
+
