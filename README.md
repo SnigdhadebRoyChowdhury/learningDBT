@@ -64,11 +64,17 @@ Just install Postgres on your system and use it.
 #### Loading the data
 The next step is to create the raw table and then insert data into them.
 
-The first step is to get the raw data in csv format. In this case I am using the Airbnb datasets that are available online.
+- The first step is to get the raw data in csv format. In this case I am using the Airbnb datasets that are available online. Go to [this](https://insideairbnb.com/get-the-data/) link and download the `listings.csv` and the `reviews.csv` files for any city. You can download is for more than one city if you want.
 
-Go to [this](https://insideairbnb.com/get-the-data/) link and download the `listings.csv` and the `reviews.csv` files for any city. You can download is for more than one cityis you want.
-
-Once you download the data, create a `data` directory as shown below in store the move your csv files there.
+- Once you download the data, create a `data` directory as shown below and move your csv files there.
 
 ![alt text](images/data_folder.png)
 
+Once the above steps are completed, execute the below steps:
+- Run the DDL commands in the `db_scripts/ddl.sql` in your Postgres instance
+- Then go to the `profiles.yml` file mentioned above and update the `dbname` field value
+- Once done, runt the below 3 scripts. Please enter the name of the dbt project while running each script
+    
+     - `insert_raw_listings.py`
+     - `insert_raw_reviews.py`
+     - `insert_raw_hosts.py`
