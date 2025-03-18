@@ -13,14 +13,7 @@ def insert_data(project_name: str):
     df_selected = df_selected.rename(columns={'host_id':'id', 'host_name':'name','host_is_superhost':'is_superhost'})
     # print(df_selected)
 
-    credentials = get_credentials_from_dbt(project_name)
-    user = credentials['user']
-    passwd = credentials['pass']
-    host = credentials['host']
-    port = credentials['port']
-    database = credentials['dbname']
-    url = f"postgresql://{user}:{passwd}@{host}:{port}/{database}"
-
+    url = get_credentials_from_dbt(project_name)
     engine = sqlalchemy.create_engine(url)
     df_selected.to_sql("raw_hosts", engine, schema="airbnb", if_exists="append", index=False)
     print("Data successfully inserted...")

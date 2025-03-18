@@ -13,13 +13,7 @@ def insert_data(project_name: str):
     df_selected['updated_at'] = pd.Timestamp.now()
     # print(df_selected)
     
-    credentials = get_credentials_from_dbt(project_name)
-    user = credentials['user']
-    passwd = credentials['pass']
-    host = credentials['host']
-    port = credentials['port']
-    database = credentials['dbname']
-    url = f"postgresql://{user}:{passwd}@{host}:{port}/{database}"
+    url = get_credentials_from_dbt(project_name)
     
     engine = sqlalchemy.create_engine(url)
     df_selected.to_sql("raw_reviews", engine, schema="airbnb", if_exists="append", index=False)

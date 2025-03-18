@@ -1,5 +1,6 @@
 import os
 import yaml
+import sqlalchemy
 
 def get_credentials_from_dbt(project_name: str):
     
@@ -7,4 +8,11 @@ def get_credentials_from_dbt(project_name: str):
     with open(profile_path, 'r') as f:
         credentials = yaml.safe_load(f)
 
-    return credentials[project_name]['outputs']['dev']
+    credential =  credentials[project_name]['outputs']['dev']
+    user = credential['user']
+    passwd = credential['pass']
+    host = credential['host']
+    port = credential['port']
+    database = credential['dbname']
+    url = f"postgresql://{user}:{passwd}@{host}:{port}/{database}"
+    return url 
