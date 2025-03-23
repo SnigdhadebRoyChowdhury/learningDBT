@@ -36,4 +36,9 @@ models:
     # The below line defines the default materialization for all the models inside the dim folder
     dim:
       +materialized: table
+    # The below line defines the default materialization for all the models inside the src folder
+    src:
+      +materialized: ephemeral
+
+
 
