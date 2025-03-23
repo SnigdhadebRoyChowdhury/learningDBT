@@ -98,3 +98,7 @@ All the models that are present in the `models` directory can be run using the `
 
 *Please note that the count in your case can be different based on the dataset that you used*
 
+Also, the number of rows appended to the table can also be seen in the output of the `dbt run` command as can be seen below
+
+![alt text](images/incremental_count.png)
+
