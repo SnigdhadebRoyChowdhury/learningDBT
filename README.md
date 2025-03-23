@@ -102,3 +102,6 @@ Also, the number of rows appended to the table can also be seen in the output of
 
 ![alt text](images/incremental_count.png)
 
+- If you want to completely rebuild the table, then run the command `dbt run --full-refresh`
+
+
