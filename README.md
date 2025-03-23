@@ -78,3 +78,23 @@ Once the above steps are completed, execute the below steps:
      - `insert_raw_listings.py`
      - `insert_raw_reviews.py`
      - `insert_raw_hosts.py`
+
+#### Creating models and running them
+
+All the models that are present in the `models` directory can be run using the `dbt run` command.
+
+#### How to load incremental review data using the incremental models
+- Download the data from the Airbnb link provided above
+- Put the csv file in the `data` directory and run the `insert_raw_reviews.py` script
+- Check the count in the `fct_reviews` table before running the model
+- Run the model using the `dbt run` command
+- Check the count again
+
+*Before*:
+![alt text](images/fct_reviews_before.png)
+
+*After*:
+![alt text](images/fct_reviews_after.png)
+
+*Please note that the count in your case can be different based the dataset that you used*
+
