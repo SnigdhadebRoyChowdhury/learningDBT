@@ -96,5 +96,5 @@ All the models that are present in the `models` directory can be run using the `
 *After*:
 ![alt text](images/fct_reviews_after.png)
 
-*Please note that the count in your case can be different based the dataset that you used*
+*Please note that the count in your case can be different based on the dataset that you used*
 
