@@ -52,8 +52,9 @@ Just install Postgres on your system and use it.
 
 
 **Setting up the dbt environment:**
+There are 2 ways in which you can set up the environment
 
-*If you want to set up everything from scratch* :
+*1. If you want to set up everything from scratch* :
 - Open up your IDE of choice and create a virtual environment in Python 
 - Once that is done, run the command, `pip install dbt-postgres==1.9.0`(*if you are using any other data platform, please install the correspoding module*)
 - Once this is done, run the command `dbt --help` to verify whether dbt core has been installed or not 
@@ -63,7 +64,7 @@ Just install Postgres on your system and use it.
 - Once you have entered the details, you can see the details using the command, `cat .dbt/profiles.yml`
 - If you want to update the details later, you can do so by editing the file `~/.dbt/profiles.yml`; you can use the `vi`, `vim` or `nano` to edit the file
 
-*If you have cloned this repo* :
+*2. If you have cloned this repo* :
 - Run the command `pip install -r requirements.txt`
 - Once that is done, open up your terminal (WSL in case of Windows), and go to the home directory `cd ~`
 - Once that is done, create the `.dbt` directory by running the command `mkdir .dbt`
