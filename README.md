@@ -52,6 +52,8 @@ Just install Postgres on your system and use it.
 
 
 **Setting up the dbt environment:**
+
+*If you want to set up everything from scratch* :
 - Open up your IDE of choice and create a virtual environment in Python 
 - Once that is done, run the command, `pip install dbt-postgres==1.9.0`(*if you are using any other data platform, please install the correspoding module*)
 - Once this is done, run the command `dbt --help` to verify whether dbt core has been installed or not 
@@ -60,6 +62,28 @@ Just install Postgres on your system and use it.
 - When you learn the above command, you will be asked to enter a few details on how to connect to PostgreSQL. Please enter the details accordingly
 - Once you have entered the details, you can see the details using the command, `cat .dbt/profiles.yml`
 - If you want to update the details later, you can do so by editing the file `~/.dbt/profiles.yml`; you can use the `vi`, `vim` or `nano` to edit the file
+
+*If you have cloned this repo* :
+- Run the command `pip install -r requirements.txt`
+- Once that is done, open up your terminal (WSL in case of Windows), and go to the home directory `cd ~`
+- Once that is done, create the `.dbt` directory by running the command `mkdir .dbt`
+- Then run the command, `touch .dbt/profiles.yml`
+- Once done, open the `profiles.yml` file in your editor of choice and put the below details
+```yaml
+dbtlearn:
+  target: dev
+  outputs:
+    dev:
+      dbname: dbt 
+      host: localhost
+      pass: <the_database_password_you_set_up>
+      port: 5432
+      schema: airbnb
+      type: postgres
+      user: postgres
+      threads: 1
+```
+- Once done, rnu the `dbt debug` command
 
 #### Loading the data
 The next step is to create the raw table and then insert data into them.
