@@ -52,6 +52,7 @@ Just install Postgres on your system and use it.
 
 
 **Setting up the dbt environment:**
+
 There are 2 ways in which you can set up the environment
 
 *1. If you want to set up everything from scratch* :
