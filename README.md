@@ -112,6 +112,7 @@ Once the above steps are completed, execute the below steps:
 - `dbt seed`: Run this command to create tables using the files in the `seeds` folder
 - `dbt source freshness`: Run this command if you have source freshness defined in the `sources.yml` file and want to check the data freshness
 - `dbt snapshot`: Run this command to create the SCD2 tables defined by sql files in the `snapshot` directory
+- `dbt test`: Run this command to execute the tests
 
 #### How to load incremental review data using the incremental models
 - Download the data from the Airbnb link provided above
