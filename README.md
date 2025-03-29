@@ -115,6 +115,8 @@ Once the above steps are completed, execute the below steps:
 - `dbt snapshot`: Run this command to create the SCD2 tables defined by sql files in the `snapshot` directory
 - `dbt test`: Run this command to execute the tests
 - `dbt test --select <model_name>`: Run this command to execute tests related to a specific model
+- `dbt run-operation <macro_name>`: Run this command to execute specific macros
+- `dbt run-operation learn_variables --vars '{variable_name: value}'`: Run this command to provide input variables
 
 
 #### How to load incremental review data using the incremental models
@@ -139,7 +141,7 @@ Also, the number of rows appended to the table can also be seen in the output of
 - If you want to completely rebuild the table, then run the command `dbt run --full-refresh`
 
 
-#### Installing and Using externaal dbt packages
+#### Installing and Using external dbt packages
 If you want use external packages in dbt, then follow the below steps:
 
 1. Create a file called `packages.yml` in the root folder of you dbt project which in this case is `dbtlearn`
