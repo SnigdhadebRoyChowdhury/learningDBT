@@ -105,9 +105,13 @@ Once the above steps are completed, execute the below steps:
      - `insert_raw_reviews.py`
      - `insert_raw_hosts.py`
 
-#### Creating models and running them
+#### dbt Commands
 
-All the models that are present in the `models` directory can be run using the `dbt run` command.
+- `dbt run`: Run this command to create the tables/views as defined in the `models` directory
+- `dbt compile`: If you want check if the models that you have created are correct or not without actually creating the objects in the database, then you can run this command
+- `dbt seed`: Run this command to create tables using the files in the `seeds` folder
+- `dbt source freshness`: Run this command if you have source freshness defined in the `sources.yml` file and want to check the data freshness
+- `dbt snapshot`: Run this command to create the SCD2 tables defined by sql files in the `snapshot` directory
 
 #### How to load incremental review data using the incremental models
 - Download the data from the Airbnb link provided above
