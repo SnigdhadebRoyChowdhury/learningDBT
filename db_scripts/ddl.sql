@@ -31,3 +31,4 @@ CREATE TABLE IF NOT EXISTS airbnb.raw_reviews
                      comments text,
                      created_at timestamp without time zone,
                      updated_at timestamp without time zone);
+
