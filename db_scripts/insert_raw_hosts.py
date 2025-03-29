@@ -2,9 +2,11 @@ import sqlalchemy
 import pandas as pd
 import os
 from credentials import get_credentials_from_dbt
+from pathlib import Path
 
 def insert_data(project_name: str):
-    path = f"{os.getcwd()}/data/listings.csv"
+    parent_path = Path.cwd().parent
+    path = f"{parent_path}/data/listings.csv"
     df = pd.read_csv(path, sep=",")
 
     df_selected = df[['host_id', 'host_name', 'host_is_superhost']]

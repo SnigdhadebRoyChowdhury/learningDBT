@@ -2,10 +2,12 @@ import sqlalchemy
 import pandas as pd
 import os
 from credentials import get_credentials_from_dbt
+from pathlib import Path
 
 
 def insert_data(project_name: str):
-    path = f"{os.getcwd()}/data/reviews.csv"
+    parent_path = Path.cwd().parent
+    path = f"{parent_path}/data/reviews.csv"
     df = pd.read_csv(path, sep=",")
 
     df_selected = df[['listing_id', 'date', 'reviewer_name', 'comments']]
