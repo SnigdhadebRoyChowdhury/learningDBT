@@ -1,6 +1,5 @@
 import sqlalchemy
 import pandas as pd
-import os
 from credentials import get_credentials_from_dbt
 from pathlib import Path
 
